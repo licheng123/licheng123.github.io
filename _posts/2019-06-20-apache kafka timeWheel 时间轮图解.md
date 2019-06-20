@@ -22,10 +22,10 @@ catalog: true
 
 ### 回顾：什么是时间轮
 
-![图一](https://ws3.sinaimg.cn/large/005BYqpggy1g3rilywrkgj30vo0h80u1.jpg)
-图一
+![图一](https://cdn.mos.cms.futurecdn.net/RdxhPVv8fAyM6oHsRgF6dH-650-80.png)
 
-如图，一排格子组成环形，每个格子有自己时间范围，当时间指针按顺序移到某个格子，该格子里的任务队列开始执行。
+
+如图1，一排格子组成环形，每个格子有自己时间范围，当时间指针按顺序移到某个格子，该格子里的任务队列开始执行。
 时间轮（TimingWheel）是一个存储定时任务的环形队列，底层采用数组实现，
 数组中的每个元素可以存放一个定时任务列表（TimerTaskList）。
 TimerTaskList是一个环形的双向链表，链表中的每一项表示的都是定时任务项（TimerTaskEntry），
@@ -42,7 +42,7 @@ TimerTaskList是一个环形的双向链表，链表中的每一项表示的都�
 ### kafka时间轮流程
 
 ![图二](https://ws3.sinaimg.cn/large/005BYqpggy1g3rj31ejj8j30zw0ptdhd.jpg)
-图二 
+
 
 上图是kafka时间轮的简单流程。
 
