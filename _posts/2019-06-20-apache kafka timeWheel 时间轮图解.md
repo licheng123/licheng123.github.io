@@ -21,6 +21,7 @@ catalog: true
 这篇文章将带领我们了解kafka是如何运用时间轮的。
 
 ### 回顾：什么是时间轮
+
 ![](https://ws3.sinaimg.cn/large/005BYqpggy1g3rilywrkgj30vo0h80u1.jpg)
 图一
 
@@ -39,6 +40,7 @@ TimerTaskList是一个环形的双向链表，链表中的每一项表示的都�
 
 
 ### kafka时间轮流程
+
 ![](https://ws3.sinaimg.cn/large/005BYqpggy1g3rj31ejj8j30zw0ptdhd.jpg)
 图二 
 
