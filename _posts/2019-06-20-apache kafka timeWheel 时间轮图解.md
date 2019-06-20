@@ -20,7 +20,7 @@ catalog: true
 时间轮(timeWheel)由于其特殊的数据结构，使得天生具备了处理定时任务的高效特性。时间轮被用作很多知名项目中，例如kafka、netty等。
 这篇文章将带领我们了解kafka是如何运用时间轮的。
 
-###回顾：什么是时间轮
+### 回顾：什么是时间轮
 ![](https://ws3.sinaimg.cn/large/005BYqpggy1g3rilywrkgj30vo0h80u1.jpg)
 图一
 
@@ -30,7 +30,7 @@ catalog: true
 TimerTaskList是一个环形的双向链表，链表中的每一项表示的都是定时任务项（TimerTaskEntry），
 其中封装了真正的定时任务TimerTask。
 
-###为什么环形队列高效：
+### 为什么环形队列高效：
 1. 任务的添加与移除，都是O(1)级的复杂度；(因为可以快速定位到任务所在的桶位置，且桶里的任务是双向链表，易增删)
 2. 不会占用大量的资源；
 3. 只需要有一个线程去推进时间轮就可以工作了;
@@ -38,7 +38,7 @@ TimerTaskList是一个环形的双向链表，链表中的每一项表示的都�
 5. 表示的时间有限。
 
 
-###kafka时间轮流程
+### kafka时间轮流程
 ![](https://ws3.sinaimg.cn/large/005BYqpggy1g3rj31ejj8j30zw0ptdhd.jpg)
 图二 
 
@@ -63,7 +63,7 @@ TimerTaskList是一个环形的双向链表，链表中的每一项表示的都�
 ```
 上述代码是kafka定义的时间轮构造方法。
 
-###时间轮添加任务
+### 时间轮添加任务
 时间轮构造结束后，我们看看当试图向这个时间轮加一个定时任务时，代码是如何工作的。
 ```java
     private void addTimerTaskEntry(TimerTaskEntry timerTaskEntry) {
