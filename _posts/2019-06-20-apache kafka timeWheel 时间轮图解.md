@@ -22,7 +22,7 @@ catalog: true
 
 ### 回顾：什么是时间轮
 
-![](https://ws3.sinaimg.cn/large/005BYqpggy1g3rilywrkgj30vo0h80u1.jpg)
+![图一](https://ws3.sinaimg.cn/large/005BYqpggy1g3rilywrkgj30vo0h80u1.jpg)
 图一
 
 如图，一排格子组成环形，每个格子有自己时间范围，当时间指针按顺序移到某个格子，该格子里的任务队列开始执行。
@@ -41,7 +41,7 @@ TimerTaskList是一个环形的双向链表，链表中的每一项表示的都�
 
 ### kafka时间轮流程
 
-![](https://ws3.sinaimg.cn/large/005BYqpggy1g3rj31ejj8j30zw0ptdhd.jpg)
+![图二](https://ws3.sinaimg.cn/large/005BYqpggy1g3rj31ejj8j30zw0ptdhd.jpg)
 图二 
 
 上图是kafka时间轮的简单流程。
