@@ -6,6 +6,9 @@ date:       2019-06-20
 author:     LC
 header-img: /img/post-bg-map.jpg
 catalog: true  
+tags:
+    - timeWheel
+    - java
 ---
 
 ### 目录
@@ -203,4 +206,5 @@ delayQueue队列会判断何时将堆顶到期的桶pop出去，被pop出去的�
  A: 虽然kafka具有快速处理的数据的能力而常用来处理大数据任务。 但是kafka使用时间轮来实现的延时任务，
 并不对外提供，producer和consumer不能要求自己的任务延迟到指定时间。 事实上，这个时间轮延迟任务是
 供kakfa集群内部自己使用的，例如 延迟加入，延迟心跳，延迟生产，延迟拉取。
+比如说心跳包，比如说producer发送一个消息到broker，需要ack这种。
 
